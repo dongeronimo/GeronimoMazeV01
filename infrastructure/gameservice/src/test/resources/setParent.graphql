@@ -1,0 +1,11 @@
+mutation setParent($parentId:String!, $childId:String!){
+    setParent(parentId:$parentId, childId:$childId){
+        id
+        children{
+            id
+            parent {
+                id
+            }
+        }
+    }
+}

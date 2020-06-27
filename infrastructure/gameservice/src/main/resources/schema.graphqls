@@ -1,0 +1,30 @@
+type Vector3 {
+    x: Float!
+    y: Float!
+    z: Float!
+}
+
+type RemoteGameObject {
+    id: String!
+    position: Vector3!
+    speed: Vector3!
+    orientation: Vector3!
+    parent: RemoteGameObject
+    children: [RemoteGameObject]!
+    prefabType: String!
+}
+
+input Vector3Input {
+    x: Float!
+    y: Float!
+    z: Float!
+}
+
+type Query {
+    getRemoteGameObjectById(id:String!):RemoteGameObject
+}
+
+type Mutation {
+    newRemoteGameObject(position:Vector3Input!, speed:Vector3Input!, orientation:Vector3Input!, prefabType:String!, parentId:String):RemoteGameObject!
+    setParent(parentId:String!, childId:String!):RemoteGameObject
+}

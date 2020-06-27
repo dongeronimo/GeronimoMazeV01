@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  webgl:
+    container_name: geronimo_maze_webgl
+    restart: always
+    image: geronimo_maze_v01/webgl
+    ports: 
+      - "10000:80"
+  gameserver:
+    container_name: geronimo_maze_gameserver
+    restart: always
+    image: geronimo_maze_v01/gameserver
+    ports:
+      - "8080:8080"
+  database:
+    container_name: geronimo_maze_database
+    restart: always
+    image: geronimo_maze_v01/database
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    ports:
+      - "9999:5432"

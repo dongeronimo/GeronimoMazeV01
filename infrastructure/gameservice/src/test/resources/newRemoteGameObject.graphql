@@ -1,0 +1,33 @@
+mutation {
+        newRemoteGameObject(position:{
+            x:1.1
+            y:2.2
+            z:3.3
+        }, speed:{
+            x:-1
+            y:-2
+            z:-3
+        }, orientation:{
+            x:1
+            y:2
+            z:3
+        }, prefabType: "shotgun"){
+            id
+            prefabType
+            position{
+                x
+                y
+                z
+            }
+            speed{
+                x
+                y
+                z
+            }
+            orientation{
+                x
+                y
+                z
+            }
+        }
+    }

@@ -1,0 +1,35 @@
+query getRemoteGameObjectById($id:String!){
+    getRemoteGameObjectById(id: $id){
+        id
+        position{
+            x
+            y
+            z
+        }
+        speed {
+            x
+            y
+            z
+        }
+        orientation {
+            x
+            y
+            z
+        }
+    }
+}
+# query {
+#     getRemoteGameObjectById($id:String!){
+#         id
+#         position {
+#             x
+#             y
+#             z
+#         }
+#         speed {
+#             x
+#             y
+#             z
+#         }
+#     }
+# }
