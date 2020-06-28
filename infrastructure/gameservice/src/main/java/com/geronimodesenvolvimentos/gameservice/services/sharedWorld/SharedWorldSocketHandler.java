@@ -39,8 +39,6 @@ public class SharedWorldSocketHandler extends TextWebSocketHandler{
         if (getWebsocketIdService.isForMe(message.getPayload())){
             getWebsocketIdService.handleMessage(session, message.getPayload());
         }
-        if (objectUpdateService.isForMe(message.getPayload())){
-            objectUpdateService.handleMessage(session, message.getPayload());
-        }
+
     }
 }

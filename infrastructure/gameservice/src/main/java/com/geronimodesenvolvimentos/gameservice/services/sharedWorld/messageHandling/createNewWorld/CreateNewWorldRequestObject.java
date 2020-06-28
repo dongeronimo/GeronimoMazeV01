@@ -1,7 +1,7 @@
 package com.geronimodesenvolvimentos.gameservice.services.sharedWorld.messageHandling.createNewWorld;
 
 public class CreateNewWorldRequestObject {
-    private String type;
+    private String type = CreateNewWorldService.messageType;
 
 	public String getType() {
 		return type;
